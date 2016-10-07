@@ -13,6 +13,8 @@ namespace dbms
 {
     public partial class frm_main : Form
     {
+        //数据库连接字符串
+        public string strCon = "Data Source=WIN-GAKRS4HUKBD;Initial Catalog=dbms;Integrated Security=True";
 
         public static string uid = "";
         public static string uname = "";
@@ -26,8 +28,7 @@ namespace dbms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //指定要链接的数据库的链接字段
-            string strCon = "Data Source=WIN-GAKRS4HUKBD;Initial Catalog=dbms;Integrated Security=True";
+            //指定要链接的数据库的链接字段    
             SqlHandler handler = new SqlHandler(strCon);
             SqlConnection conn = handler.Link();
             string cmdStr = "select * from dbo.view_user";
@@ -50,7 +51,7 @@ namespace dbms
             else
             {
                 //还没有用户登录
-                frm_login login = new frm_login();
+                frm_login login = new frm_login(strCon);
                 login.Owner = this;
                 login.ShowDialog();
                 tss_label.Text = "用户" + uname + "已登录";
