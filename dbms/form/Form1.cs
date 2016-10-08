@@ -103,5 +103,11 @@ namespace dbms
             frm_select select = new frm_select(strCon);
             select.Show();
         }
+
+        private void 增加ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_insert insert = new frm_insert();
+            insert.ShowDialog();
+        }
     }
 }

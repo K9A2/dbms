@@ -12,9 +12,24 @@ namespace dbms
 {
     public partial class frm_insert : Form
     {
+        //状态栏提示信息
+        string msg_fname = "";
+        string msg_sname = "";
+        string msg_
+
         public frm_insert()
         {
             InitializeComponent();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_insert_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -76,7 +76,7 @@
             this.dgv_main.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_main.Enabled = false;
-            this.dgv_main.Location = new System.Drawing.Point(12, 60);
+            this.dgv_main.Location = new System.Drawing.Point(11, 219);
             this.dgv_main.Name = "dgv_main";
             this.dgv_main.RowTemplate.Height = 27;
             this.dgv_main.Size = new System.Drawing.Size(658, 365);
@@ -87,9 +87,9 @@
             this.sts_down.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.sts_down.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tss_label});
-            this.sts_down.Location = new System.Drawing.Point(0, 428);
+            this.sts_down.Location = new System.Drawing.Point(0, 595);
             this.sts_down.Name = "sts_down";
-            this.sts_down.Size = new System.Drawing.Size(682, 25);
+            this.sts_down.Size = new System.Drawing.Size(692, 25);
             this.sts_down.TabIndex = 5;
             this.sts_down.Text = "您尚未登录";
             // 
@@ -112,7 +112,7 @@
             // 登录ToolStripMenuItem
             // 
             this.登录ToolStripMenuItem.Name = "登录ToolStripMenuItem";
-            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.登录ToolStripMenuItem.Text = "登录";
             this.登录ToolStripMenuItem.Click += new System.EventHandler(this.登录ToolStripMenuItem_Click);
             // 
@@ -120,14 +120,14 @@
             // 
             this.注销ToolStripMenuItem.Enabled = false;
             this.注销ToolStripMenuItem.Name = "注销ToolStripMenuItem";
-            this.注销ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.注销ToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.注销ToolStripMenuItem.Text = "注销";
             this.注销ToolStripMenuItem.Click += new System.EventHandler(this.注销ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -148,6 +148,7 @@
             this.增加ToolStripMenuItem.Name = "增加ToolStripMenuItem";
             this.增加ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.增加ToolStripMenuItem.Text = "增加";
+            this.增加ToolStripMenuItem.Click += new System.EventHandler(this.增加ToolStripMenuItem_Click);
             // 
             // 删除ToolStripMenuItem
             // 
@@ -257,13 +258,13 @@
             this.报表ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(682, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(692, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btn_select_frm_main
             // 
-            this.btn_select_frm_main.Location = new System.Drawing.Point(514, 32);
+            this.btn_select_frm_main.Location = new System.Drawing.Point(548, 123);
             this.btn_select_frm_main.Name = "btn_select_frm_main";
             this.btn_select_frm_main.Size = new System.Drawing.Size(75, 23);
             this.btn_select_frm_main.TabIndex = 2;
@@ -280,7 +281,7 @@
             "刊名全称",
             "刊名简称",
             "ISSN"});
-            this.lsb_select_frm_main.Location = new System.Drawing.Point(12, 31);
+            this.lsb_select_frm_main.Location = new System.Drawing.Point(11, 123);
             this.lsb_select_frm_main.Name = "lsb_select_frm_main";
             this.lsb_select_frm_main.Size = new System.Drawing.Size(120, 24);
             this.lsb_select_frm_main.TabIndex = 6;
@@ -288,7 +289,7 @@
             // txt_inout_frm_main
             // 
             this.txt_inout_frm_main.Font = new System.Drawing.Font("宋体", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_inout_frm_main.Location = new System.Drawing.Point(138, 33);
+            this.txt_inout_frm_main.Location = new System.Drawing.Point(163, 126);
             this.txt_inout_frm_main.Name = "txt_inout_frm_main";
             this.txt_inout_frm_main.Size = new System.Drawing.Size(370, 23);
             this.txt_inout_frm_main.TabIndex = 7;
@@ -296,7 +297,7 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(595, 32);
+            this.button1.Location = new System.Drawing.Point(559, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -307,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 453);
+            this.ClientSize = new System.Drawing.Size(692, 620);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_inout_frm_main);
             this.Controls.Add(this.lsb_select_frm_main);
