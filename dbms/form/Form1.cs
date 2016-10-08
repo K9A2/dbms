@@ -31,8 +31,8 @@ namespace dbms
             //指定要链接的数据库的链接字段    
             SqlHandler handler = new SqlHandler(strCon);
             SqlConnection conn = handler.Link();
-            string cmdStr = "select * from dbo.view_user";
-            dgv_main.DataSource = handler.Query(conn, cmdStr);
+            string strSql = "select * from dbo.view_user";
+            dgv_main.DataSource = handler.Query(conn, strSql);
             handler.Disopse(conn);
         }
 
@@ -92,6 +92,12 @@ namespace dbms
             //清理数据库链接
             //退出程序
             Environment.Exit(0);
+        }
+
+        private void 查找ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_select select = new frm_select(strCon);
+            select.Show();
         }
     }
 }

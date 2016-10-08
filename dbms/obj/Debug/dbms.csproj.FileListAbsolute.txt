@@ -8,3 +8,4 @@ E:\Projects\CS\dbms\dbms\obj\Debug\dbms.exe
 E:\Projects\CS\dbms\dbms\obj\Debug\dbms.pdb
 E:\Projects\CS\dbms\dbms\obj\Debug\dbms.frm_main.resources
 E:\Projects\CS\dbms\dbms\obj\Debug\dbms.frm_login.resources
+E:\Projects\CS\dbms\dbms\obj\Debug\dbms.frm_select.resources

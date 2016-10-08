@@ -12,9 +12,15 @@ namespace dbms
 {
     public partial class frm_select : Form
     {
-        public frm_select()
+        //数据库连接字符串
+        private string strCon = "";
+
+        public frm_select(string strCon)
         {
             InitializeComponent();
+            this.strCon = strCon;
         }
+
+
     }
 }

@@ -31,7 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dgv_main = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sts_down = new System.Windows.Forms.StatusStrip();
+            this.tss_label = new System.Windows.Forms.ToolStripStatusLabel();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.注销ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,11 +53,10 @@
             this.年藏刊引用数报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.年藏刊引用数报表ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.年藏刊引用数报表ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sts_down = new System.Windows.Forms.StatusStrip();
-            this.tss_label = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_main)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.sts_down.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -79,25 +79,32 @@
             // 
             // dgv_main
             // 
+            this.dgv_main.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_main.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_main.Enabled = false;
             this.dgv_main.Location = new System.Drawing.Point(12, 60);
             this.dgv_main.Name = "dgv_main";
             this.dgv_main.RowTemplate.Height = 27;
             this.dgv_main.Size = new System.Drawing.Size(658, 365);
             this.dgv_main.TabIndex = 3;
             // 
-            // menuStrip1
+            // sts_down
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.文件ToolStripMenuItem,
-            this.功能ToolStripMenuItem,
-            this.报表ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(682, 28);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
+            this.sts_down.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.sts_down.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tss_label});
+            this.sts_down.Location = new System.Drawing.Point(0, 428);
+            this.sts_down.Name = "sts_down";
+            this.sts_down.Size = new System.Drawing.Size(682, 25);
+            this.sts_down.TabIndex = 5;
+            this.sts_down.Text = "您尚未登录";
+            // 
+            // tss_label
+            // 
+            this.tss_label.Name = "tss_label";
+            this.tss_label.Size = new System.Drawing.Size(189, 20);
+            this.tss_label.Text = "您尚未登录，无法进行操作";
             // 
             // 文件ToolStripMenuItem
             // 
@@ -160,6 +167,7 @@
             this.查找ToolStripMenuItem.Name = "查找ToolStripMenuItem";
             this.查找ToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.查找ToolStripMenuItem.Text = "查找";
+            this.查找ToolStripMenuItem.Click += new System.EventHandler(this.查找ToolStripMenuItem_Click);
             // 
             // 修改ToolStripMenuItem
             // 
@@ -247,22 +255,18 @@
             this.年藏刊引用数报表ToolStripMenuItem2.Size = new System.Drawing.Size(240, 26);
             this.年藏刊引用数报表ToolStripMenuItem2.Text = "2007年藏刊引用数报表";
             // 
-            // sts_down
+            // menuStrip1
             // 
-            this.sts_down.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.sts_down.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tss_label});
-            this.sts_down.Location = new System.Drawing.Point(0, 428);
-            this.sts_down.Name = "sts_down";
-            this.sts_down.Size = new System.Drawing.Size(682, 25);
-            this.sts_down.TabIndex = 5;
-            this.sts_down.Text = "您尚未登录";
-            // 
-            // tss_label
-            // 
-            this.tss_label.Name = "tss_label";
-            this.tss_label.Size = new System.Drawing.Size(189, 20);
-            this.tss_label.Text = "您尚未登录，无法进行操作";
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.文件ToolStripMenuItem,
+            this.功能ToolStripMenuItem,
+            this.报表ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(682, 28);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // frm_main
             // 
@@ -279,10 +283,10 @@
             this.Text = "期刊信息管理系统（设计制作：林晋霆）";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_main)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.sts_down.ResumeLayout(false);
             this.sts_down.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,7 +296,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgv_main;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.StatusStrip sts_down;
+        private System.Windows.Forms.ToolStripStatusLabel tss_label;
+        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 登录ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 注销ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 功能ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 增加ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
@@ -309,12 +318,7 @@
         private System.Windows.Forms.ToolStripMenuItem 年藏刊引用数报表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 年藏刊引用数报表ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 年藏刊引用数报表ToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 登录ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 注销ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip sts_down;
-        private System.Windows.Forms.ToolStripStatusLabel tss_label;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
