@@ -23,22 +23,26 @@ namespace dbms
         public frm_main()
         {
             InitializeComponent();
-            dgv_main.ReadOnly = true;
+            dgv_main.ReadOnly = false;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //主窗体查找按钮
             //指定要链接的数据库的链接字段    
             SqlHandler handler = new SqlHandler(strCon);
             SqlConnection conn = handler.Link();
-            string strSql = "select * from dbo.view_user";
+            string strTarget = txt_inout_frm_main.Text.ToString().Trim();
+            string strClass = lsb_select_frm_main.SelectedItem.ToString().Trim();
+            //实现模糊查询
+            string strSql = "select * from dbo.view_all where " + strClass + " like '%" + strTarget + "%'";
             dgv_main.DataSource = handler.Query(conn, strSql);
             handler.Disopse(conn);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            lsb_select_frm_main.SelectedIndex = 0;
         }
 
         private void 登录ToolStripMenuItem_Click(object sender, EventArgs e)
