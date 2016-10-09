@@ -12,11 +12,18 @@ namespace dbms
 {
     public partial class frm_insert : Form
     {
+<<<<<<< HEAD
         //指示所有输入数据是否合法
         private bool isAcceptable = false;
 
         //状态栏提示信息
 
+=======
+        //状态栏提示信息
+        string msg_fname = "";
+        string msg_sname = "";
+        string msg_
+>>>>>>> origin/master
 
         public frm_insert()
         {
@@ -28,6 +35,7 @@ namespace dbms
             cbo_isTop.SelectedIndex = 0;
         }
 
+<<<<<<< HEAD
         private void frm_insert_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr = new DialogResult();
@@ -122,5 +130,16 @@ namespace dbms
 
         }
 
+=======
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_insert_Load(object sender, EventArgs e)
+        {
+            
+        }
+>>>>>>> origin/master
     }
 }
