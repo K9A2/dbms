@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace dbms
 {
@@ -51,12 +52,22 @@ namespace dbms
         /// <returns>返回DataTable</returns>
         public DataTable Query(SqlConnection conn, string cmdText)
         {
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = cmdText;
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
             DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            cmd.Dispose();
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = cmdText;
+                cmd.CommandTimeout = 3;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                cmd.Dispose();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("详细信息"+e.ToString(), "数据库连接失败！");
+            }
+
             return dt;
         }
 
